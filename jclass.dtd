@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT   FIELD           EMPTY>
+<!ELEMENT   IMPLEMENTS      EMPTY>
+<!ELEMENT   PARAM           EMPTY>
+<!ELEMENT   THROWS          EMPTY>
+<!ELEMENT   LINE            (#PCDATA)>
+
+<!ELEMENT   CODE            (LINE+)>
+<!ELEMENT   METHOD          (CODE,PARAM*,THROWS*)>
+
+<!ELEMENT   CLASS           (METHOD*,FIELD*,IMPLEMENTS*)>
+<!ELEMENT   INTERFACE       (METHOD*)>
+<!ELEMENT   CLASSFILE       (CLASS|INTERFACE)>
+
+<!ATTLIST   LINE        number      CDATA   #REQUIRED>
+
+<!ATTLIST   PARAM       name        CDATA   #REQUIRED>
+<!ATTLIST   PARAM       type        CDATA   #REQUIRED>
+
+<!ATTLIST   THROWS      name        CDATA   #REQUIRED>
+
+<!ATTLIST   IMPLEMENTS  name        CDATA   #REQUIRED>
+
+<!ATTLIST   FIELD       name        CDATA   #REQUIRED>
+<!ATTLIST   FIELD       descriptor   CDATA   #REQUIRED>
+<!ATTLIST   FIELD       accessflags CDATA   #REQUIRED>
+
+<!ATTLIST   METHOD      name        CDATA   #REQUIRED>
+<!ATTLIST   METHOD      returntype  CDATA   #REQUIRED>
+<!ATTLIST   METHOD      accessflags CDATA   #REQUIRED>
+<!ATTLIST   METHOD      isstaticinit  CDATA   #REQUIRED>
+
+<!ATTLIST   CLASS       name        CDATA   #REQUIRED>
+<!ATTLIST   CLASS       accessflags CDATA   #REQUIRED>
+<!ATTLIST   CLASS       extends     CDATA   #REQUIRED>
