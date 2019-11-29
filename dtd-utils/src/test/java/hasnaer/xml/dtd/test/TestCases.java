@@ -2,16 +2,16 @@ package hasnaer.xml.dtd.test;
 
 import hasnaer.xml.dtd.DTD;
 import hasnaer.xml.dtd.DTD2Class;
+import org.junit.Test;
+
 import java.io.FileInputStream;
 import java.util.Arrays;
-import junit.framework.TestSuite;
-import org.junit.Test;
 
 /**
  *
  * @author hasnae rehioui
  */
-public class TestCases extends TestSuite {
+public class TestCases {
 
     @Test
     public void domxml() throws Exception {

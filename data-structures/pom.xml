@@ -13,4 +13,10 @@
     <artifactId>data-structures</artifactId>
     <name>data-structures</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.sourceforge.jregex</groupId>
+            <artifactId>jregex</artifactId>
+        </dependency>
+    </dependencies>
 </project>
