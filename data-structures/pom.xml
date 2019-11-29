@@ -10,7 +10,7 @@
       <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>decompiler</artifactId>
-    <name>decompiler</name>
+    <artifactId>data-structures</artifactId>
+    <name>data-structures</name>
 
 </project>

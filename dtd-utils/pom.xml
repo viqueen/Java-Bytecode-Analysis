@@ -12,4 +12,22 @@
 
     <artifactId>dtd-utils</artifactId>
     <name>dtd-utils</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.viqueen.java</groupId>
+            <artifactId>data-structures</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.26.0-GA</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+    </dependencies>
+
 </project>

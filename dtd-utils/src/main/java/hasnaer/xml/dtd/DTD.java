@@ -2,16 +2,18 @@ package hasnaer.xml.dtd;
 
 import hasnaer.ds.tree.TreeNode;
 import hasnaer.ds.tree.andor.AndOrTree;
-import hasnaer.data.util.IOUtils;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import jregex.Matcher;
+import java.util.regex.Matcher;
+
+import org.apache.commons.io.IOUtils;
 
 /**
  *
@@ -33,7 +35,7 @@ public class DTD {
         _publicEntities = new HashMap<String, PublicEntity>();
         _attributesByElements = new HashMap<String, List<Attribute>>();
         _elementPrefix = elementPrefix;
-        parse(IOUtils.stream2string(dtdStream).replaceAll("\r|\n", " ").trim());
+        parse(IOUtils.toString(dtdStream, StandardCharsets.UTF_8).replaceAll("[\r\n]", " ").trim());
         bind();
     }
 
@@ -67,7 +69,7 @@ public class DTD {
                 _publicEntities.putAll(dtd._publicEntities);
             }
         }
-        parse(IOUtils.stream2string(stream).replaceAll("\r|\n", " ").trim());
+        parse(IOUtils.toString(stream, StandardCharsets.UTF_8).replaceAll("\r|\n", " ").trim());
         bind();
     }
 

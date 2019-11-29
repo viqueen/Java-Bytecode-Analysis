@@ -12,8 +12,41 @@
     <name>decompiler-root</name>
 
     <modules>
+      <module>data-structures</module>
       <module>dtd-utils</module>
-      <module>decompiler</module>
+      <module>java-decompiler</module>
     </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.viqueen.java</groupId>
+                <artifactId>data-structures</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.viqueen.java</groupId>
+                <artifactId>dtd-utils</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

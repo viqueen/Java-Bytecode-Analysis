@@ -3,7 +3,8 @@ package hasnaer.xml.dtd;
 import hasnaer.ds.tree.andor.AndOrTree.Frequency;
 import hasnaer.ds.tree.andor.AndOrTree.Type;
 import hasnaer.ds.tree.andor.AndOrTreeParser;
-import jregex.Pattern;
+
+import java.util.regex.Pattern;
 
 /**
  *
